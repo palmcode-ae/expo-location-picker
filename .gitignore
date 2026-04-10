@@ -55,3 +55,12 @@ yarn-error.log
 
 # Expo
 .expo/*
+.agents
+.claude
+skills-lock.json
+
+# Environment files (always commit `.env.example` instead)
+.env
+.env.local
+.env.*.local
+!.env.example

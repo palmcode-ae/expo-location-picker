@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  White inner circle — the "hole" of the pin marker. Drawn in its own
+  drawable so it can be stacked on top of the tinted body
+  (`expolocationpicker_pin.xml`) without inheriting the body's tint.
+
+  Same coordinates as the iOS PinMarkerView holeLayer and the web SVG's
+  inner <circle>: center (16, 14), radius 5, in a 32×40 viewport so the
+  alignment matches the body drawable exactly.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="40dp"
+    android:viewportWidth="32"
+    android:viewportHeight="40">
+  <path
+      android:fillColor="#FFFFFF"
+      android:pathData="M16,9 C13.24,9 11,11.24 11,14 C11,16.76 13.24,19 16,19 C18.76,19 21,16.76 21,14 C21,11.24 18.76,9 16,9 z" />
+</vector>

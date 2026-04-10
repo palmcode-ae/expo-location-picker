@@ -15,10 +15,12 @@ Pod::Spec.new do |s|
     :tvos => '15.1'
   }
   s.swift_version  = '5.9'
-  s.source         = { git: 'https://github.com/b0iq/expo-location-picker' }
+  s.source         = { git: 'https://github.com/palmcode-ae/expo-location-picker.git' }
   s.static_framework = true
 
   s.dependency 'ExpoModulesCore'
+
+  s.frameworks = 'MapKit', 'CoreLocation', 'Contacts', 'UIKit'
 
   # Swift/Objective-C compatibility
   s.pod_target_xcconfig = {

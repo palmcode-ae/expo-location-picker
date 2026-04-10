@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+  <!--
+    Theme overlay applied to the picker dialog so every Material 3 component
+    we instantiate (SearchBar, FloatingActionButton, MaterialCardView, …)
+    resolves its theme attributes correctly. Inheriting from
+    Theme.Material3.DayNight means we automatically get light/dark mode and,
+    on Android 12+, Material You dynamic color when wrapped through
+    DynamicColors.wrapContextIfAvailable().
+  -->
+  <style name="Theme.ExpoLocationPicker" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="android:windowBackground">?attr/colorSurface</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:navigationBarColor">?attr/colorSurface</item>
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+    <item name="android:windowLightNavigationBar" tools:targetApi="o_mr1">true</item>
+  </style>
+
+</resources>

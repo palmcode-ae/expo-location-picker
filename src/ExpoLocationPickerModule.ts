@@ -1,12 +1,17 @@
 import { NativeModule, requireNativeModule } from 'expo';
 
-import { ExpoLocationPickerModuleEvents } from './ExpoLocationPicker.types';
+import type {
+  PickLocationOptions,
+  PickLocationResult,
+} from './ExpoLocationPicker.types';
 
-declare class ExpoLocationPickerModule extends NativeModule<ExpoLocationPickerModuleEvents> {
-  PI: number;
-  hello(): string;
-  setValueAsync(value: string): Promise<void>;
+declare class ExpoLocationPickerModule extends NativeModule {
+  pickLocation(
+    options?: PickLocationOptions,
+  ): Promise<PickLocationResult | null>;
 }
 
-// This call loads the native module object from the JSI.
-export default requireNativeModule<ExpoLocationPickerModule>('ExpoLocationPicker');
+// Loads the native module from the JSI.
+export default requireNativeModule<ExpoLocationPickerModule>(
+  'ExpoLocationPicker',
+);

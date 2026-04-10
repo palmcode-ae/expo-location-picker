@@ -1,13 +1,24 @@
 {
   "name": "expo-location-picker",
-  "version": "0.1.0",
-  "description": "Picking location natively",
+  "version": "1.0.1",
+  "description": "Native, in-app location picker for Expo (MapKit on iOS, Material 3 + Google Maps on Android, Google Maps JS on web).",
   "main": "build/index.js",
   "types": "build/index.d.ts",
+  "files": [
+    "android/build.gradle",
+    "android/src/main/AndroidManifest.xml",
+    "android/src/main/java",
+    "android/src/main/res",
+    "build",
+    "expo-module.config.json",
+    "ios"
+  ],
   "scripts": {
     "build": "expo-module build",
+    "dev": "tsc --watch --preserveWatchOutput",
     "clean": "expo-module clean",
-    "lint": "expo-module lint",
+    "lint": "biome check src",
+    "format": "biome format --write src",
     "test": "expo-module test",
     "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
@@ -18,22 +29,35 @@
   "keywords": [
     "react-native",
     "expo",
-    "expo-location-picker",
-    "ExpoLocationPicker"
+    "expo-module",
+    "location",
+    "location-picker",
+    "map",
+    "mapkit",
+    "google-maps",
+    "places"
   ],
-  "repository": "https://github.com/b0iq/expo-location-picker",
-  "bugs": {
-    "url": "https://github.com/b0iq/expo-location-picker/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/palmcode-ae/expo-location-picker.git"
   },
-  "author": "b0iq <contact@b0iq.com> (b0iq)",
+  "bugs": {
+    "url": "https://github.com/palmcode-ae/expo-location-picker/issues"
+  },
+  "author": "PalmCode (https://github.com/palmcode-ae)",
+  "contributors": [
+    "b0iq <contact@b0iq.com> (https://github.com/b0iq)"
+  ],
   "license": "MIT",
-  "homepage": "https://github.com/b0iq/expo-location-picker#readme",
+  "homepage": "https://github.com/palmcode-ae/expo-location-picker#readme",
   "dependencies": {},
   "devDependencies": {
-    "@types/react": "~19.1.1",
+    "@biomejs/biome": "2.4.11",
+    "@types/react": "~19.2.10",
     "expo-module-scripts": "^55.0.2",
     "expo": "^55.0.13",
-    "react-native": "0.82.1"
+    "react": "19.2.0",
+    "react-native": "0.83.4"
   },
   "peerDependencies": {
     "expo": "*",

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Teardrop pin marker — body only.
+
+  Designed so the visible tip lands exactly at the bottom-center of the
+  viewport (16, 40). An ImageView whose bottom edge is anchored to the
+  desired map point will have its pin tip *on* that point with no offset
+  math required.
+
+  The body is white so `imageTintList` (set from Kotlin in `CenterPinView`
+  to the themed `theme.pin` color) tints it cleanly. The white inner
+  "hole" of the pin is drawn by a *separate* drawable
+  (`expolocationpicker_pin_hole.xml`) stacked on top — it has to live in
+  its own ImageView, otherwise tinting the body would also tint the hole
+  and you'd lose the contrast.
+
+  The path is identical to ios/PinMarkerView (UIBezierPath) and
+  src/web/picker.ts (PIN_SVG), so all three platforms render the same
+  shape pixel-for-pixel.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="32dp"
+    android:height="40dp"
+    android:viewportWidth="32"
+    android:viewportHeight="40">
+  <path
+      android:fillColor="#FFFFFF"
+      android:strokeColor="#FFFFFF"
+      android:strokeWidth="1.5"
+      android:pathData="M16,2 C8.27,2 2,7.27 2,14 C2,17.5 3.27,20.7 5.4,23.2 L16,40 L26.6,23.2 C28.73,20.7 30,17.5 30,14 C30,7.27 23.73,2 16,2 z" />
+</vector>
