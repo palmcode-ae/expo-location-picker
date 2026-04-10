@@ -5,13 +5,13 @@ plugins {
 }
 
 group = 'expo.modules.locationpicker'
-version = '1.0.1'
+version = '1.0.2'
 
 android {
   namespace "expo.modules.locationpicker"
   defaultConfig {
     versionCode 1
-    versionName "1.0.1"
+    versionName "1.0.2"
   }
   lintOptions {
     abortOnError false

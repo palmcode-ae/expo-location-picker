@@ -1,6 +1,6 @@
 {
   "name": "expo-location-picker",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Native, in-app location picker for Expo (MapKit on iOS, Material 3 + Google Maps on Android, Google Maps JS on web).",
   "main": "build/index.js",
   "types": "build/index.d.ts",
